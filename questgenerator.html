@@ -1,0 +1,59 @@
+<html>
+<head>
+<style>
+.fill {
+    text-decoration: underline;
+}
+
+.spoiler {
+    background-color: black;
+    color: black;
+}
+
+.unspoiler {
+    background-color: #EEE;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script src="fills.js"></script>
+<script src="quest.js"></script>
+<script>
+$(document).ready(function(){
+        make();
+
+        $(".spoiler").click(
+            function(e){
+            $(".spoiler").toggleClass("unspoiler");
+            });
+        });
+</script>
+</head>
+<body>
+<button onclick="make();">gen</button>
+<h1>
+A notably 
+<span class="fill spoiler" id="actor_description"></span> 
+<span class="fill spoiler" id="actor"></span>, in order 
+<span class="fill spoiler" id="actor_goal"></span>, is
+<span class="fill spoiler" id="actor_drive"></span>
+by 
+<span class="fill spoiler" id="actor_driver"></span>
+<span class="fill spoiler" id="action"></span>
+<span class="fill spoiler" id="target"></span>,
+but
+<span class="fill spoiler" id="sacrifice"></span>
+because
+<span id="sacrifice_excuse" class="fill spoiler"></span>.
+
+Some
+<span class="fill" id="adventurer_description"></span>
+adventurers are driven
+<span class="fill" id="adventurer_drive"></span> 
+by 
+<span class="fill" id="adventurer_driver"></span>
+into
+<span class="fill spoiler" id="adventurer_action"></span>.
+
+</h1>
+</body>
+</html>
